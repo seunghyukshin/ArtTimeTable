@@ -18,7 +18,7 @@ class StudentFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding = DataBindingUtil.inflate<FragmentStudentBinding>(inflater, R.layout.fragment_student,container,false)
+        val binding = DataBindingUtil.inflate<FragmentStudentBinding>(inflater, R.layout.fragment_student, container,false)
         val viewModel = StudentViewModel()
         binding.model = viewModel
 

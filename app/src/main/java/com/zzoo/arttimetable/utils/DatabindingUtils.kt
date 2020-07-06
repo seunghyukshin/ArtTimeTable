@@ -1,5 +1,6 @@
 package com.zzoo.arttimetable.utils
 
+import android.widget.TextView
 import androidx.databinding.BindingAdapter
 import androidx.databinding.ObservableArrayList
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -22,5 +23,9 @@ object DatabindingUtils {
         recyclerView.adapter?.notifyDataSetChanged()
     }
 
-
+    @BindingAdapter("bind_text")
+    @JvmStatic
+    fun bindStudentAge(textView: TextView, age: Int){
+        textView.setText(age.toString())
+    }
 }

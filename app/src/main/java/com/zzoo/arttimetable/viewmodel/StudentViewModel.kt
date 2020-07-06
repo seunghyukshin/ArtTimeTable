@@ -19,8 +19,9 @@ class StudentViewModel {
     }
 
     private fun addToList(){
-        studentList.add(Student(name.get().toString(),   age.get().toString().toInt(), sex.get().toString()))
+        studentList.add(Student(name.get().toString(), age.get().toString().toInt(), sex.get().toString()))
     }
+
     private fun clear(){
         name.set("")
         age.set("")

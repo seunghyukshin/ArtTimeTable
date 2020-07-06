@@ -21,7 +21,6 @@ class StudentRecyclerViewAdapter :RecyclerView.Adapter<StudentRecyclerViewAdapte
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        Log.d("hello",items.toString())
         holder.bind(items[position])
     }
 
