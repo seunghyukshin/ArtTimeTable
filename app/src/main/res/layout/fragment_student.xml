@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="model"
+            type="com.zzoo.arttimetable.viewmodel.StudentViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="478dp"
+        android:layout_height="927dp"
+        android:orientation="vertical"
+        tools:context=".view.fragment.StudentFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/nameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이름"></TextView>
+
+            <EditText
+                android:id="@+id/nameEt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@={model.name}"></EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/ageTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="나이"></TextView>
+
+            <EditText
+                android:id="@+id/ageEt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:text="@={model.age}"></EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/sexTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="성별"></TextView>
+
+            <EditText
+                android:id="@+id/sexEt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@={model.sex}"></EditText>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/registerBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:onClick="@{() -> model.registerStudent()}"
+            android:text="등록" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            bind_studentlist="@{model.studentList}"/>
+
+
+    </LinearLayout>
+</layout>

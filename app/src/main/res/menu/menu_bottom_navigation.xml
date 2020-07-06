@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@id/studentFragment"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="학생관리"
+        />
+    <item
+        android:id="@id/timeTableFragment"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="시간표"
+        />
+    <item
+        android:id="@id/memoFragment"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="메모장"
+        />
+
+</menu>
